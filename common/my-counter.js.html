@@ -1,0 +1,11 @@
+<script>
+  const inc = () => ++this.element.count;
+  const dec = () => --this.element.count;
+  this.onMount = () => {
+    this.root.getElementById('inc').onclick = inc;
+    this.root.getElementById('dec').onclick = dec;
+  }
+  this.onUpdate = (name, oldValue, newValue) => {
+    this.root.getElementById('count').innerText = newValue;
+  }
+</script>
